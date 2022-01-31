@@ -130,14 +130,15 @@ public extension IQKeyboardManager {
                 toolbar.titleBarButton.title = textField.drawingToolbarPlaceholder
             }
 
-            //Setting toolbar title font.   //  (Enhancement ID: #30)
-            toolbar.titleBarButton.titleFont = placeholderFont
-
-            //Setting toolbar title color.   //  (Enhancement ID: #880)
-            toolbar.titleBarButton.titleColor = placeholderColor
-
-            //Setting toolbar button title color.   //  (Enhancement ID: #880)
-            toolbar.titleBarButton.selectableTitleColor = placeholderButtonColor
+            //Removed for custom FBGO segmented toolbar addition.
+//            //Setting toolbar title font.   //  (Enhancement ID: #30)
+//            toolbar.titleBarButton.titleFont = placeholderFont
+//
+//            //Setting toolbar title color.   //  (Enhancement ID: #880)
+//            toolbar.titleBarButton.titleColor = placeholderColor
+//
+//            //Setting toolbar button title color.   //  (Enhancement ID: #880)
+//            toolbar.titleBarButton.selectableTitleColor = placeholderButtonColor
 
         } else {
             toolbar.titleBarButton.title = nil

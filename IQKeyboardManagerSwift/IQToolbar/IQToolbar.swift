@@ -84,20 +84,22 @@ open class IQToolbar: UIToolbar, UIInputViewAudioFeedback {
     /**
      Title bar button of toolbar.
      */
-    private var privateTitleBarButton: IQTitleBarButtonItem?
-    @objc open var titleBarButton: IQTitleBarButtonItem {
-        get {
-            if privateTitleBarButton == nil {
-                privateTitleBarButton = IQTitleBarButtonItem(title: nil)
-                privateTitleBarButton?.accessibilityLabel = "Title"
+    //Modified for FBGO custom segmented Toolbar.
+        private var privateTitleBarButton: IQBarButtonItem?
+        @objc open var titleBarButton: IQBarButtonItem {
+            get {
+                if privateTitleBarButton == nil {
+                    privateTitleBarButton = IQBarButtonItem()
+                    privateTitleBarButton?.accessibilityLabel = "Title"
+                    privateTitleBarButton?.isEnabled = false
+                }
+                return privateTitleBarButton!
             }
-            return privateTitleBarButton!
-        }
 
-        set (newValue) {
-            privateTitleBarButton = newValue
+            set (newValue) {
+                privateTitleBarButton = newValue
+            }
         }
-    }
 
     /**
      Done bar button of toolbar.

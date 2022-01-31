@@ -276,6 +276,14 @@ UIView category methods to add IQToolbar on UIKeyboard.
     }
 
     // MARK: Common
+    
+    // Added for FBGO Custom segmented toolbar.
+    func addKeyboardToolbarWithTarget(target: AnyObject?, titleButton: IQBarButtonItem) {
+        if self.responds(to: #selector(setter: UITextField.inputAccessoryView)) {
+            let toolbar = self.keyboardToolbar
+            toolbar.titleBarButton = titleButton
+        }
+    }
 
     func addKeyboardToolbarWithTarget(target: AnyObject?, titleText: String?, rightBarButtonConfiguration: IQBarButtonItemConfiguration?, previousBarButtonConfiguration: IQBarButtonItemConfiguration? = nil, nextBarButtonConfiguration: IQBarButtonItemConfiguration? = nil) {
 
